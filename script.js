@@ -1,82 +1,18 @@
-/* script.js — Mounica Paladugu Portfolio */
+//index.js
 
-// ── Year in footer ────────────────────────────────────────────────────────
-document.getElementById("year").textContent = new Date().getFullYear();
+const hamburger = document.getElementById("hamburger");
+const menu = document.querySelector(".menu");
 
-// ── Typewriter ────────────────────────────────────────────────────────────
-const ROLES = ["Backend Engineer", "Full-Stack Developer", "Technical Lead"];
-const el = document.getElementById("typewriter");
-let roleIdx = 0,
-  charIdx = 0,
-  deleting = false;
-
-function typeWriter() {
-  const word = ROLES[roleIdx];
-  el.textContent = word.slice(0, charIdx);
-
-  if (!deleting && charIdx < word.length) {
-    charIdx++;
-    setTimeout(typeWriter, 85);
-  } else if (!deleting) {
-    setTimeout(() => {
-      deleting = true;
-      typeWriter();
-    }, 2200);
-  } else if (deleting && charIdx > 0) {
-    charIdx--;
-    setTimeout(typeWriter, 40);
+hamburger.addEventListener("click", function () {
+  const hamIcon = this.querySelector(".hamburger-icon");
+  const crossIcon = this.querySelector(".cross-icon");
+  if (hamIcon.style.display === "none") {
+    hamIcon.style.display = "inline-block";
+    menu.style.display = "none";
+    crossIcon.style.display = "none";
   } else {
-    deleting = false;
-    roleIdx = (roleIdx + 1) % ROLES.length;
-    setTimeout(typeWriter, 400);
+    crossIcon.style.display = "inline-block";
+    hamIcon.style.display = "none";
+    menu.style.display = "block";
   }
-}
-typeWriter();
-
-// ── Scroll reveal ──────────────────────────────────────────────────────────
-const revealEls = document.querySelectorAll(".reveal");
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target); // fire once
-      }
-    });
-  },
-  { threshold: 0.1 },
-);
-
-revealEls.forEach((el) => revealObserver.observe(el));
-
-// ── Nav: scrolled state ───────────────────────────────────────────────────
-const nav = document.querySelector(".nav");
-window.addEventListener(
-  "scroll",
-  () => {
-    nav.classList.toggle("scrolled", window.scrollY > 40);
-  },
-  { passive: true },
-);
-
-// ── Nav: active link highlight ────────────────────────────────────────────
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === `#${entry.target.id}`,
-          );
-        });
-      }
-    });
-  },
-  { threshold: 0.35 },
-);
-
-sections.forEach((s) => sectionObserver.observe(s));
+});
