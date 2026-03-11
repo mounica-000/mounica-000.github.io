@@ -1,417 +1,646 @@
-<!--index.html-->
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta
+      name="description"
+      content="Mounica Paladugu — Backend & Full-Stack Software Engineer based in Mountain View, CA."
+    />
+    <title>Mounica Paladugu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css" />
   </head>
-
   <body>
-    <!-- Navbar header section -->
-    <header class="header">
-      <nav class="navbar">
-        <div class="logo">
-          <h2 class="logo-heading">Emrit Diyal</h2>
-        </div>
-        <div class="hamburger" id="hamburger">
-          <i class="fas fa-bars hamburger-icon"></i>
-          <i class="fas fa-times cross-icon"></i>
-        </div>
-        <div class="menu">
-          <ul class="menu-list">
-            <li class="menu-list-items">
-              <a class="links" href="#home"> Home </a>
-            </li>
-            <li class="menu-list-items">
-              <a class="links" href="#portfolio"> Portfolio </a>
-            </li>
-            <li class="menu-list-items">
-              <a class="links" href="#about"> About </a>
-            </li>
-            <li class="menu-list-items">
-              <a class="links" href="#services"> Services </a>
-            </li>
-            <li class="menu-list-items">
-              <a class="links" href="#contact"> Contact Me </a>
-            </li>
-          </ul>
-        </div>
+    <!-- ── NAV ─────────────────────────────────────────────────────────────── -->
+    <header class="nav" role="banner">
+      <a href="#hero" class="nav-logo" aria-label="Home">mp.</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <!-- Main hero banner -->
-    <section id="home" class="hero">
-      <div class="intro">
-        <div class="headings">
-          <h3 class="greet-heading">Hello, I'm</h3>
-          <h1 class="my-heading">Emrit Diyal</h1>
-          <h4 class="sub-heading">
-            A Software Engineer with 3 years of Experience.
-          </h4>
+    <main>
+      <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+      <section id="hero" class="hero" aria-label="Introduction">
+        <div class="hero-grid"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="label">Hi, I'm</p>
+          <h1>Mounica<br />Paladugu</h1>
+          <div class="divider" aria-hidden="true"></div>
+          <p class="typewriter-wrap" aria-label="Software Engineer roles">
+            <span id="typewriter"></span
+            ><span class="cursor" aria-hidden="true"></span>
+          </p>
+          <p class="hero-sub">
+            I build systems that scale — and teams that ship.<br />
+            CS grad from Drexel, based in Mountain View, CA.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-outline">Get in Touch</a>
+            <div class="social-row" aria-label="Social links">
+              <a
+                href="https://github.com/mounica-000"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/mounica-paladugu"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="mailto:meismounica079@gmail.com" aria-label="Email">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="intro-buttons">
-          <button class="btn common-btn">Hire Me</button>
-          <button class="btn ghost-btn">Get Resume</button>
-        </div>
-      </div>
-    </section>
+        <a
+          href="#about"
+          class="scroll-hint"
+          aria-label="Scroll to About section"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </a>
+      </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-      <div class="portfolio-heading">
-        <h1 class="my-heading text-center">Featured Portfolio</h1>
-      </div>
-      <div class="portfolio-content">
-        <div class="my-row">
-          <div class="my-col">
-            <div class="my-card port-card">
-              <div class="image">
-                <img src="./Images/designImage2.avif" alt="Web Design Image" />
+      <!-- ── ABOUT ──────────────────────────────────────────────────────────── -->
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="container reveal">
+          <p class="section-label">About</p>
+          <h2 id="about-heading">A bit about me</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I'm a CS grad from Drexel with a thing for clean APIs, fast
+                databases, and figuring out why things break at 2am.
+              </p>
+              <p>
+                I've shipped backend systems at a medical device startup, built
+                health data pipelines at a wireless tech company, and now lead
+                an engineering team building tech-for-good out of Mountain View.
+              </p>
+              <p>
+                I care about code that's maintainable, systems that scale, and
+                docs that actually help the next person.
+              </p>
+              <div class="about-meta">
+                <span>
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  Mountain View, CA
+                </span>
+                <span class="teal">Open to relocation ✈</span>
               </div>
-              <h3 class="greet-heading blue-text">Web Design</h3>
-              <p class="small-para blue-text">Designing</p>
             </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card port-card">
-              <div class="image">
-                <img
-                  src="./Images/webDevelopment2.avif"
-                  alt="Web Development Image"
-                />
+            <div class="stats-grid" role="list" aria-label="Career stats">
+              <div class="stat-card" role="listitem">
+                <span class="stat-num">3+</span>
+                <span class="stat-lbl">Years Experience</span>
               </div>
-              <h3 class="greet-heading blue-text">Web Development</h3>
-              <p class="small-para blue-text">Development</p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card port-card">
-              <div class="image">
-                <img src="./Images/SEOImage2.avif" alt="SEO Image" />
+              <div class="stat-card" role="listitem">
+                <span class="stat-num">2</span>
+                <span class="stat-lbl">Co-ops Completed</span>
               </div>
-              <h3 class="greet-heading blue-text">SEO</h3>
-              <p class="small-para blue-text">Optimization</p>
-            </div>
-          </div>
-        </div>
-        <div class="my-row">
-          <div class="my-col">
-            <div class="my-card port-card">
-              <div class="image">
-                <img
-                  src="./Images/contentImage2.avif"
-                  alt="Content Writting Image"
-                />
+              <div class="stat-card" role="listitem">
+                <span class="stat-num">4+</span>
+                <span class="stat-lbl">Projects Shipped</span>
               </div>
-              <h3 class="greet-heading blue-text">Content Writing</h3>
-              <p class="small-para blue-text">Writing</p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card port-card">
-              <div class="image">
-                <img
-                  src="./Images/wordpressImage2.avif"
-                  alt="Wordpress Image"
-                />
+              <div class="stat-card" role="listitem">
+                <span class="stat-num">5</span>
+                <span class="stat-lbl">Engineers Led</span>
               </div>
-              <h3 class="greet-heading blue-text">WordPress Dev</h3>
-              <p class="small-para blue-text">Content Management System</p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card port-card">
-              <div class="image">
-                <img
-                  src="./Images/videoEditing2.avif"
-                  alt="Video Editing Image"
-                />
-              </div>
-              <h3 class="greet-heading blue-text">Video Editing</h3>
-              <p class="small-para blue-text">Editing</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="about-text">
-        <h1 class="my-heading">About Me</h1>
-        <p class="lead-para">
-          GeeksforGeeks is a leading platform that provides computer science
-          resources and coding challenges for programmers and technology
-          enthusiasts, along with interview and exam preparations for upcoming
-          aspirants. With a strong emphasis on enhancing coding skills and
-          knowledge, it has become a trusted destination for over 12 million
-          plus registered users worldwide. The platform offers a vast collection
-          of tutorials, practice problems, interview tutorials, articles, and
-          courses, covering various domains of computer science.
-        </p>
-        <p>
-          Our exceptional mentors hailing from top colleges & organizations have
-          the ability to guide you on a journey from the humble beginnings of
-          coding to the pinnacle of expertise. Under their guidance watch your
-          skills flourish as we lay the foundation and help you conquer the
-          world of coding.
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="./Images/heroImg2.avif" alt="About Image" />
-      </div>
-    </section>
+      <!-- ── EXPERIENCE ─────────────────────────────────────────────────────── -->
+      <section
+        id="experience"
+        class="section section-alt"
+        aria-labelledby="exp-heading"
+      >
+        <div class="container reveal">
+          <p class="section-label">Experience</p>
+          <h2 id="exp-heading">Where I've worked</h2>
+          <ol class="timeline" reversed aria-label="Work experience timeline">
+            <li class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Technical Manager</h3>
+                    <p class="timeline-co">Develop For Good</p>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>Oct 2025 – Present</span>
+                    <span>Remote, CA</span>
+                  </div>
+                </div>
+                <div class="tag-row" aria-label="Role tags">
+                  <span class="tag">Leadership</span>
+                  <span class="tag">Full-Stack</span>
+                </div>
+                <ul>
+                  <li>
+                    Led a team of 5 engineers to build and ship a food recovery
+                    platform for Ohio organizations using React, Python, and
+                    Airtable — deployed on Vercel.
+                  </li>
+                  <li>
+                    Authored the PRD and presented the finished product to 10+
+                    industry engineers, receiving recognition for design quality
+                    and stakeholder clarity.
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <div class="services-heading">
-        <h1 class="my-heading text-center">My Services</h1>
-      </div>
-      <div class="services-content">
-        <div class="my-row">
-          <div class="my-col">
-            <div class="my-card">
-              <div class="icon">
-                <i class="fas fa-paint-brush"></i>
+            <li class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Backend Software Engineer Intern</h3>
+                    <p class="timeline-co">Rajant Corporation</p>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>Mar – Sep 2023</span>
+                    <span>Malvern, PA</span>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="tag">Backend</span>
+                  <span class="tag">APIs</span>
+                </div>
+                <ul>
+                  <li>
+                    Designed a RESTful API (Python/FastAPI, InfluxDB, Docker) to
+                    ingest and standardize wearable health data, enabling
+                    hospital record compatibility.
+                  </li>
+                  <li>
+                    Optimized queries and schema to achieve sub-50ms data
+                    retrieval; automated a file ingestion pipeline saving 5
+                    hrs/week.
+                  </li>
+                </ul>
               </div>
-              <h3 class="greet-heading blue-text">Web Design</h3>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card">
-              <div class="icon">
-                <i class="fa-solid fa-code"></i>
-              </div>
-              <h3 class="greet-heading blue-text">Web Development</h3>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card">
-              <div class="icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3 class="greet-heading blue-text">SEO</h3>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-row">
-          <div class="my-col">
-            <div class="my-card">
-              <div class="icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <h3 class="greet-heading blue-text">Content Writting</h3>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card">
-              <div class="icon">
-                <i class="fab fa-wordpress-simple"></i>
-              </div>
-              <h3 class="greet-heading blue-text">WordPress Dev</h3>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-            </div>
-          </div>
-          <div class="my-col">
-            <div class="my-card">
-              <div class="icon">
-                <i class="fas fa-video"></i>
-              </div>
-              <h3 class="greet-heading blue-text">Video Editing</h3>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-              <p class="small-para">
-                Web development refers to the creating, building, and
-                maintaining of websites. It includes aspects such as web design,
-                web publishing, web programming, and database management. It is
-                the creation of an application that works over the internet i.e.
-                websites.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </li>
 
-    <!-- Contact me section -->
-    <section class="contact" id="contact">
-      <div class="contact-heading">
-        <h1 class="my-heading text-center">Contact Me</h1>
-      </div>
-      <div class="contact-content">
-        <div class="contact-form-container">
-          <h1 class="greet-heading">Get In Touch</h1>
-          <form class="contact-form">
-            <input class="form-controls" type="text" placeholder="Your Name" />
-            <input class="form-controls" type="text" placeholder="Your Email" />
-            <input class="form-controls" type="text" placeholder="Your Phone" />
-            <textarea
-              class="form-controls"
-              placeholder="Write your message"
-              name="message"
-              id=""
-              cols="30"
-              rows="10"
-            >
-            </textarea>
-            <input
-              class="form-btn btn common-btn"
-              type="submit"
-              value="Send Message"
-            />
-          </form>
+            <li class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Product Development Engineer Intern</h3>
+                    <p class="timeline-co">Pression LLC</p>
+                  </div>
+                  <div class="timeline-meta">
+                    <span>Mar – Sep 2022</span>
+                    <span>Coatesville, PA</span>
+                  </div>
+                </div>
+                <div class="tag-row">
+                  <span class="tag">Embedded</span>
+                  <span class="tag">Python</span>
+                </div>
+                <ul>
+                  <li>
+                    Led the transition of a medical device from unstable v1
+                    prototype to manufacturing-ready v2, integrating embedded C
+                    firmware with system UI.
+                  </li>
+                  <li>
+                    Automated the test data pipeline — 25% storage cost
+                    reduction, 50% less data loss — and refactored 2000+ lines
+                    of broken UI code.
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ol>
         </div>
-        <div class="contact-details">
-          <h1 class="greet-heading">My Contact Details</h1>
-          <div class="details">
-            <h5 class="contact-heading">EMAIL</h5>
-            <p class="contact-text">example@gmail.com</p>
-          </div>
-          <div class="details">
-            <h5 class="contact-heading">PHONE</h5>
-            <p class="contact-text">+91 0123456789</p>
-          </div>
-          <div class="details">
-            <h5 class="contact-heading">FAX</h5>
-            <p class="contact-text">+91 0123456789</p>
-          </div>
-          <div class="details">
-            <h5 class="contact-heading">ADDRESS</h5>
-            <p class="contact-text">San Francisco, CA</p>
-            <p>4th Floor8 Lower</p>
-            <p>San Francisco street, M1 50F</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer section -->
-    <footer class="footer">
-      <div class="footer-content text-center">
-        <h4>
-          Copyright © 2023 All rights reserved | This portfolio website template
-          is created by GeeksforGeeks.
-        </h4>
-        <div class="social-links">
-          <div class="footer-menu">
-            <ul class="footer-menu-list">
-              <li class="footer-list-items">
-                <a class="footer-links" href="#">
-                  <i class="fab fa-facebook-f"></i>
+      <!-- ── PROJECTS ───────────────────────────────────────────────────────── -->
+      <section id="projects" class="section" aria-labelledby="proj-heading">
+        <div class="container reveal">
+          <p class="section-label">Projects</p>
+          <h2 id="proj-heading">Things I've built</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-title-row">
+                  <h3>MyDailyTime</h3>
+                  <span class="wip-badge" aria-label="Work in progress"
+                    >WIP</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/mounica-000"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub: MyDailyTime"
+                  class="project-link"
+                >
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
                 </a>
-              </li>
-              <li class="footer-list-items">
-                <a class="footer-links" href="#">
-                  <i class="fab fa-twitter"></i>
+              </div>
+              <p>
+                RESTful backend API to track daily activities and analyze time
+                usage patterns, with JWT auth and analytics endpoints.
+              </p>
+              <div class="stack-row" aria-label="Tech stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">FastAPI</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">JWT</span>
+                <span class="stack-tag">Docker</span>
+                <span class="stack-tag">AWS</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-title-row">
+                  <h3>Virtual Pet</h3>
+                </div>
+                <a
+                  href="https://github.com/mounica-000/Virtual-Pet-Forum"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub: Virtual Pet"
+                  class="project-link"
+                >
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
                 </a>
-              </li>
-              <li class="footer-list-items">
-                <a class="footer-links" href="#">
-                  <i class="fab fa-instagram"></i>
+              </div>
+              <p>
+                Full-stack real-time interactive pet simulator with WebSocket
+                chat, persistent sessions, and normalized database schemas.
+              </p>
+              <div class="stack-row" aria-label="Tech stack">
+                <span class="stack-tag">TypeScript</span>
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">MySQL</span>
+                <span class="stack-tag">WebSockets</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-title-row">
+                  <h3>Study Buddy</h3>
+                </div>
+                <a
+                  href="https://github.com/mounica-000/Study-Buddy"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub: Study Buddy"
+                  class="project-link"
+                >
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
                 </a>
-              </li>
-              <li class="footer-list-items">
-                <a class="footer-links" href="#">
-                  <i class="fab fa-linkedin-in"></i>
+              </div>
+              <p>
+                Collaborative study platform with real-time chat rooms, task
+                management, and flashcard features.
+              </p>
+              <div class="stack-row" aria-label="Tech stack">
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">Express</span>
+                <span class="stack-tag">JavaScript</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-title-row">
+                  <h3>Bank System</h3>
+                </div>
+                <a
+                  href="https://github.com/mounica-000"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub: Bank System"
+                  class="project-link"
+                >
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
                 </a>
-              </li>
-            </ul>
+              </div>
+              <p>
+                OOP bank account management system with APR calculations, full
+                TDD test coverage, and automated CI/CD pipelines.
+              </p>
+              <div class="stack-row" aria-label="Tech stack">
+                <span class="stack-tag">Java</span>
+                <span class="stack-tag">JUnit</span>
+                <span class="stack-tag">Git</span>
+                <span class="stack-tag">CI/CD</span>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
+      <section
+        id="skills"
+        class="section section-alt"
+        aria-labelledby="skills-heading"
+      >
+        <div class="container reveal">
+          <p class="section-label">Skills</p>
+          <h2 id="skills-heading">What I work with</h2>
+          <div class="skills-grid">
+            <div class="skills-group">
+              <p class="skills-category">Languages</p>
+              <div class="skill-tags" role="list">
+                <span role="listitem">Python</span
+                ><span role="listitem">Java</span
+                ><span role="listitem">JavaScript</span
+                ><span role="listitem">TypeScript</span
+                ><span role="listitem">SQL</span><span role="listitem">C</span
+                ><span role="listitem">Bash</span
+                ><span role="listitem">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skills-group">
+              <p class="skills-category">Frameworks</p>
+              <div class="skill-tags" role="list">
+                <span role="listitem">FastAPI</span
+                ><span role="listitem">React</span
+                ><span role="listitem">Node.js</span
+                ><span role="listitem">Express</span
+                ><span role="listitem">JUnit</span>
+              </div>
+            </div>
+            <div class="skills-group">
+              <p class="skills-category">Databases & Cloud</p>
+              <div class="skill-tags" role="list">
+                <span role="listitem">PostgreSQL</span
+                ><span role="listitem">MySQL</span
+                ><span role="listitem">InfluxDB</span
+                ><span role="listitem">Docker</span
+                ><span role="listitem">AWS</span
+                ><span role="listitem">Nginx</span>
+              </div>
+            </div>
+            <div class="skills-group">
+              <p class="skills-category">Tools & Practices</p>
+              <div class="skill-tags" role="list">
+                <span role="listitem">Git</span
+                ><span role="listitem">CI/CD</span
+                ><span role="listitem">Agile</span
+                ><span role="listitem">Postman</span
+                ><span role="listitem">Figma</span
+                ><span role="listitem">Linux/Unix</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ────────────────────────────────────────────────────────── -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <div class="container reveal contact-inner">
+          <p class="section-label">Contact</p>
+          <h2 id="contact-heading">Let's build something</h2>
+          <p class="contact-sub">
+            I'm open to full-time SWE roles — backend, full-stack, or anything
+            interesting in between. Drop me a line.
+          </p>
+          <ul class="contact-links" role="list">
+            <li>
+              <a href="mailto:meismounica079@gmail.com">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                meismounica079@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/mounica-paladugu"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                linkedin.com/in/mounica-paladugu
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/mounica-000"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
+                github.com/mounica-000
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p>
+        Designed & built by Mounica Paladugu &middot; <span id="year"></span>
+      </p>
     </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-      integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="script.js"></script>
   </body>
 </html>
