@@ -1,0 +1,207 @@
+/* ===========================================================
+   NATURE-THEMED PORTFOLIO — Design System & Global Styles
+   ===========================================================
+   FONT SWITCH: Change --font-primary to swap fonts.
+     Default: 'Montserrat'  |  Alt: 'Open Sans'
+   =========================================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ── Font ─────────────────────────────────────── */
+  --font-primary: 'Montserrat', sans-serif;
+  /* --font-primary: 'Open Sans', sans-serif; */
+
+  /* ── Sky ──────────────────────────────────────── */
+  --sky-50: #EBF5FB;
+  --sky-100: #D6EBF7;
+  --sky-200: #B8DBF0;
+  --sky-300: #87CEEB;
+  --sky-400: #6BB3D9;
+  --sky-gradient: linear-gradient(180deg, #7EC8E3 0%, #B8E0F7 40%, #E0F2FE 100%);
+
+  /* ── Foliage ──────────────────────────────────── */
+  --green-50: #F1F8E9;
+  --green-100: #DCEDC8;
+  --green-200: #C5E1A5;
+  --green-300: #AED581;
+  --green-400: #8BC34A;
+  --green-500: #689F38;
+  --green-600: #4A7C2E;
+  --green-700: #33691E;
+  --green-800: #2D5016;
+  --green-accent: #4CAF50;
+
+  /* ── Stream ───────────────────────────────────── */
+  --stream-50: #E3F2FD;
+  --stream-100: #BBDEFB;
+  --stream-200: #90CAF9;
+  --stream-300: #64B5F6;
+
+  /* ── Earth ────────────────────────────────────── */
+  --earth-50: #EFEBE9;
+  --earth-100: #D7CCC8;
+  --earth-200: #BCAAA4;
+  --earth-300: #A1887F;
+  --earth-400: #8D6E63;
+  --earth-500: #795548;
+  --earth-600: #6D4C41;
+  --earth-700: #5D4037;
+  --earth-800: #4E342E;
+  --earth-900: #3E2723;
+
+  /* ── Text ─────────────────────────────────────── */
+  --text-primary: #1B2A1B;
+  --text-secondary: #4A5D4A;
+  --text-tertiary: #7A8C7A;
+  --text-on-dark: #F5F0EB;
+  --text-on-dark-muted: #D7CCC8;
+  --white: #FFFFFF;
+  --off-white: #FAFAF7;
+  --cream: #FFF8F0;
+
+  /* ── Scale ────────────────────────────────────── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* ── Spacing ──────────────────────────────────── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* ── Misc ─────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 24px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.1);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-normal: 300ms var(--ease-out);
+  --transition-slow: 500ms var(--ease-out);
+
+  --max-width: 1100px;
+  --nav-height: 70px;
+  --section-padding: 5rem 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  background: var(--white);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; font-weight: 700; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+/* ── Utilities ──────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section-heading {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-3xl);
+  position: relative;
+  display: inline-block;
+}
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--green-accent);
+  border-radius: var(--radius-full);
+}
+
+/* ── Buttons ────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+.btn-primary {
+  background: var(--green-600);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--green-700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 124, 46, 0.35);
+}
+.btn-outline {
+  border: 2px solid var(--green-600);
+  color: var(--green-600);
+}
+.btn-outline:hover {
+  background: var(--green-600);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ── Scroll Animations ──────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3.5rem 1.25rem;
+    --text-6xl: 2.5rem;
+    --text-5xl: 2rem;
+    --text-4xl: 1.75rem;
+    --text-3xl: 1.5rem;
+  }
+}

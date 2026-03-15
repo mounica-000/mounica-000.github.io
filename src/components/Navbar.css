@@ -1,0 +1,84 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  transition: background var(--transition-normal), box-shadow var(--transition-normal);
+}
+.navbar.scrolled {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+}
+.navbar-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.logo-accent { color: var(--green-accent); }
+
+.navbar-links {
+  display: flex;
+  gap: var(--space-xl);
+}
+.navbar-link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: var(--space-2xs) 0;
+  transition: color var(--transition-fast);
+}
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--green-accent);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal);
+}
+.navbar-link:hover,
+.navbar-link.active { color: var(--green-600); }
+.navbar-link:hover::after,
+.navbar-link.active::after { width: 100%; }
+
+.navbar-toggle {
+  display: none;
+  color: var(--text-primary);
+  padding: var(--space-xs);
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+  }
+  .navbar-links {
+    position: fixed;
+    top: 0; right: 0;
+    width: 260px; height: 100vh;
+    background: var(--white);
+    flex-direction: column;
+    padding: calc(var(--nav-height) + var(--space-xl)) var(--space-2xl);
+    gap: var(--space-lg);
+    box-shadow: var(--shadow-xl);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+  }
+  .navbar-links.open { transform: translateX(0); }
+  .navbar-link { font-size: var(--text-base); }
+}
