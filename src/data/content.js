@@ -6,20 +6,20 @@ export const personalInfo = {
   email: 'meismounica079@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mounica-paladugu',
   github: 'https://www.github.com/mounica-000',
-  resumePath: '/resume.pdf',
+  resumePath: '/Mounica_Paladugu_Resume.pdf',
 };
 
 export const skills = [
   { category: 'Languages', items: ['Python', 'Java', 'SQL'] },
   { category: 'Backend', items: ['FastAPI', 'REST APIs'] },
   { category: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'Linux', 'Postman'] },
+  { category: 'Tools', items: ['Git', 'Docker', 'Linux', 'Postman', 'AWS', 'AI Agents'] },
   { category: 'Concepts', items: ['Data Structures & Algorithms', 'System Design Basics', 'RESTful Architecture'] },
 ];
 
 export const exploring = [
-  'Data Structures & Algorithms (LeetCode)',
-  'System Design Fundamentals',
+  'AI Agents, LLM, RAG',
+  'System Design & Data Structures and Algorithms',
   'FastAPI & Python Backend Development',
   'Building full-stack projects',
 ];
@@ -54,16 +54,25 @@ export const experiences = [
     location: 'Coatesville, PA',
     dates: 'Mar 2022 – Sep 2022',
     bullets: [
-      'Automated the test data pipeline in Python, reducing storage costs by 25% and minimizing data loss by 50%.',
-      'Led the transition of a medical device from unstable v1 prototype to manufacturing-ready v2, integrating embedded C firmware with system UI software and testing to ensure reliability.',
-      'Refactored and fixed 2000+ lines of broken UI code and wrote comprehensive documentation to improve maintainability and long-term scalability.',
-      "Established the team's first Git repository and issue tracking system, then onboarded the next intern by documenting all system components, data flows, and code architecture.",
-    ],
+      'Automated the test data pipeline in Python for the company’s medical device, reducing file storage costs by 25% and cutting data loss by 50%.',
+      'Led the medical device transition from an unstable v1 prototype to a reliable manufacturing-ready v2, integrating embedded C firmware with system UI software, achieved zero field failures across all test scenarios, and enabled the company to pursue FDA clearance filing.',
+      "Refactored and debugged 2000+ lines of broken UI code and authored comprehensive system documentation coveringarchitecture, data flows, and component design to support long-term maintainability.",
+    ], 
     tech: ['Python', 'C', 'Git'],
   },
 ];
 
 export const projects = [
+    {
+    name: 'GitHub Issue Root Cause Agent',
+    tech: 'Python, FastAPI, ChromaDB, Streamlit, Groq API, sentence-transformers',
+    bullets: [
+      'Built an end-to-end RAG (Retrieval-Augmented Generation) pipeline that ingests GitHub issues, generates vector embeddings using all-MiniLM-L6-v2, and stores them in a ChromaDB vector store for persistent semantic search.',
+      'Engineered a semantic retrieval system using cosine similarity to surface the top-3 most relevant past issues for any new bug report, achieving 89% retrieval precision across paraphrased query variants in end-to-end evaluation.',
+      'Integrated Llama 3.3 70b via Groq API with a structured prompt template grounded in retrieved context, returning actionable root cause analysis and fix suggestions; exposed as a REST API via FastAPI with a Streamlit demo UI.',
+    ],
+    github: 'https://github.com/mounica-000/github-issue-agent',
+  },
   {
     name: 'MyDailyTime',
     tech: 'Python, FastAPI, PostgreSQL, JWT Auth',
@@ -104,6 +113,7 @@ export const education = {
   dates: 'Sep 2020 – Jun 2025',
   courses: [
     'Data Structures and Algorithms',
+    'Computer Architecture',
     'Software Engineering',
     'Databases',
     'Advanced Web Development',
