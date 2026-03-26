@@ -28,13 +28,15 @@ export const experiences = [
   {
     role: 'Software Engineer',
     company: 'Develop For Good',
-    location: 'Remote, CA',
+    location: 'Mountain View, CA',
     dates: 'Oct 2025 – Present',
     bullets: [
-      'Built and shipped a full-stack food recovery platform for Ohio organizations using React and Python, deploying on Vercel and integrating Google Analytics to track user activity and platform engagement.',
-      'Led a team of 5 engineers through agile development, authored the PRD and technical roadmap, and presented the final product to 10+ industry engineers, earning recognition for clear product vision and user-centered design.',
+      'Live: https://www.accesstoexcessfood.org',
+      'Led end-to-end development of a food recovery platform (React, Python, FastAPI, Vercel) serving Ohio organizations, shipping from zero to production in 3 months.',
+      'Designed a headless CMS architecture using Airtable as a dynamic data layer, eliminating client dependency on engineers for content updates and cutting change request turnaround from days to minutes.',
+      'Drove post-launch growth to 25+ MAU(Monthly Active Users) within 2 weeks by integrating Google Analytics to identify friction points and iterate on UX.'
     ],
-    tech: ['React', 'Python', 'Vercel', 'Google Analytics'],
+    tech: ['React', 'Python', 'Vercel', 'Google Analytics', 'AI'],
   },
   {
     role: 'Backend Software Engineer Intern',
@@ -42,9 +44,9 @@ export const experiences = [
     location: 'Malvern, PA',
     dates: 'Mar 2023 – Sep 2023',
     bullets: [
-      'Designed a backend RESTful API (Python/FastAPI, InfluxDB, Docker) to ingest and standardize wearable health data, enabling compatibility with hospital records and company AI platform.',
-      'Optimized queries and database schema to reduce data retrieval times to under 50ms and improve scalability.',
-      'Cut 5 hours of manual work per week by independently identifying and automating a file ingestion pipeline into cloud storage.',
+      'Identified CockroachDB as a latency bottleneck for massive time-series health data; researched, evaluated, and migrated to InfluxDB, reducing query latency ∼6x (350–500ms → 50–90ms) and improving system scalability and reliability.',
+      'Designed a RESTful API (Python/FastAPI, Docker) with 10+ endpoints supporting multi-resolution health data aggregations (daily, weekly, monthly, 6-month), ingesting 5 wearable health measurements and enabling integration with hospital records and the internal AI platform.',
+      'Automated a real-time file sync pipeline in Python that watched a local directory and propagated changes to MinIO S3 cloud storage automatically, eliminating 5+ hours of manual work per week.',
     ],
     tech: ['Python', 'FastAPI', 'InfluxDB', 'Docker'],
   },
