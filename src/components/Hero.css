@@ -17,19 +17,19 @@
 }
 .cloud-1 {
   width: 220px; top: 12%; left: 5%;
-  animation: drift 28s ease-in-out infinite;
+  animation: drift 18s ease-in-out infinite;
 }
 .cloud-2 {
   width: 170px; top: 22%; right: 8%;
-  animation: drift 35s ease-in-out infinite reverse;
+  animation: drift 22s ease-in-out infinite reverse;
 }
 .cloud-3 {
   width: 200px; top: 6%; right: 30%;
-  animation: drift 32s ease-in-out infinite 4s;
+  animation: drift 20s ease-in-out infinite 3s;
 }
 @keyframes drift {
   0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(40px); }
+  50% { transform: translateX(60px); }
 }
 
 /* ── Layout ────────────────────────────────────── */

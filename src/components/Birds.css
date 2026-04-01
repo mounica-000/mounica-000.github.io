@@ -1,0 +1,89 @@
+/* ── Birds container ───────────────────────────── */
+.birds-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* ── Individual bird wrapper ──────────────────── */
+.bird-anim {
+  position: absolute;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* Birds from the left edge → fly right & up toward centre, then shrink away */
+.bird-anim.from-left {
+  left: -30px;
+  animation-name: fly-from-left;
+}
+
+/* Birds from the right edge → fly left & up toward centre, then shrink away */
+.bird-anim.from-right {
+  right: -30px;
+  animation-name: fly-from-right;
+}
+
+/* ── Flight paths ─────────────────────────────── */
+@keyframes fly-from-left {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateX(45vw) translateY(var(--bird-wobble, -10px)) scale(0.7);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(55vw) translateY(-60px) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes fly-from-right {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateX(-45vw) translateY(var(--bird-wobble, -10px)) scale(0.7);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-55vw) translateY(-60px) scale(0.1);
+    opacity: 0;
+  }
+}
+
+/* ── Wing flap ────────────────────────────────── */
+@keyframes wing-flap {
+  0%, 100% {
+    d: path("M0,6 L6,2 L12,6 L18,2 L24,6");
+  }
+  50% {
+    d: path("M0,6 L6,9 L12,6 L18,9 L24,6");
+  }
+}
+
+/* Fallback for browsers that don't support animating `d`:
+   use scaleY on the SVG to simulate up/down flutter */
+.bird-svg {
+  animation: bird-body-bob 2s ease-in-out infinite;
+}
+
+@keyframes bird-body-bob {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.7);
+  }
+}

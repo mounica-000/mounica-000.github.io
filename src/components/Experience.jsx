@@ -22,6 +22,11 @@ export default function Experience() {
                     <span><FiCalendar size={13}/> {exp.dates}</span>
                     <span><FiMapPin size={13}/> {exp.location}</span>
                   </div>
+                  {exp.liveLink && (
+                    <p className="exp-live-link">
+                      🔗 <a href={exp.liveLink} target="_blank" rel="noopener noreferrer">Live Site</a>
+                    </p>
+                  )}
                   <ul className="exp-bullets">
                     {exp.bullets.map((b, j) => (
                       <li key={j}>{b}</li>

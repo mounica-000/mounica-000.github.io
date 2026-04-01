@@ -30,8 +30,8 @@ export const experiences = [
     company: 'Develop For Good',
     location: 'Mountain View, CA',
     dates: 'Oct 2025 – Present',
+    liveLink: 'https://www.accesstoexcessfood.org',
     bullets: [
-      'Live: https://www.accesstoexcessfood.org',
       'Led end-to-end development of a food recovery platform (React, Python, FastAPI, Vercel) serving Ohio organizations, shipping from zero to production in 3 months.',
       'Designed a headless CMS architecture using Airtable as a dynamic data layer, eliminating client dependency on engineers for content updates and cutting change request turnaround from days to minutes.',
       'Drove post-launch growth to 25+ MAU(Monthly Active Users) within 2 weeks by integrating Google Analytics to identify friction points and iterate on UX.'

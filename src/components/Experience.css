@@ -66,6 +66,20 @@
   align-items: center;
   gap: 4px;
 }
+.exp-live-link {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-sm);
+}
+.exp-live-link a {
+  color: var(--green-600);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+.exp-live-link a:hover {
+  color: var(--green-accent);
+  text-decoration: underline;
+}
 .exp-bullets {
   list-style: disc;
   padding-left: var(--space-lg);

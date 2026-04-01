@@ -1,6 +1,7 @@
 import { FiDownload } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { personalInfo } from '../data/content';
+import Birds from './Birds';
 import './Hero.css';
 
 export default function Hero() {
@@ -16,6 +17,9 @@ export default function Hero() {
       <svg className="cloud cloud-3" viewBox="0 0 180 70" fill="white" opacity="0.45">
         <ellipse cx="55" cy="42" rx="42" ry="22"/><ellipse cx="100" cy="32" rx="52" ry="28"/><ellipse cx="145" cy="42" rx="38" ry="20"/>
       </svg>
+
+      {/* Dynamic flying birds */}
+      <Birds />
 
       <div className="hero-inner">
         <div className="hero-text">
