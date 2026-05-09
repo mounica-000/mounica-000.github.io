@@ -10,26 +10,38 @@ export const personalInfo = {
 };
 
 export const skills = [
-  { category: 'Languages', items: ['Python', 'Java', 'SQL'] },
-  { category: 'Backend', items: ['FastAPI', 'REST APIs'] },
-  { category: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'Linux', 'Postman', 'AWS', 'AI Agents'] },
-  { category: 'Concepts', items: ['Data Structures & Algorithms', 'System Design Basics', 'RESTful Architecture'] },
+  { category: 'Languages', items: ['Python', 'Java', 'SQL', 'JavaScript'] },
+  { category: 'Backend', items: ['FastAPI', 'Spring Boot', 'REST APIs'] },
+  { category: 'Frontend', items: ['React', 'HTML', 'CSS'] },
+  { category: 'Tools', items: ['Git', 'Docker', 'Linux', 'Postman', 'AWS', 'Kafka', 'Kubernetes', 'CI/CD'] },
+  { category: 'Concepts', items: ['Data Structures & Algorithms', 'System Design Basics', 'RESTful Architecture', 'Distributed Systems'] },
 ];
 
 export const exploring = [
   'AI Agents, LLM, RAG',
   'System Design & Data Structures and Algorithms',
-  'FastAPI & Python Backend Development',
+  'FastAPI & Python + Java Backend Development',
   'Building full-stack projects',
 ];
 
 export const experiences = [
+    {
+    role: 'Software Engineer, Full Stack',
+    company: 'Saayam For All',
+    location: 'Remote, CA',
+    dates: 'Apr 2026 – Present',
+    bullets: [
+      'Developing the distributed \textbf{backend REST API} microservices using Java, Spring Boot, Docker, and deploying them in Kafka, AWS EKS (Kubernetes) environments.',
+      'Fixing existing issues on the webapp and working collaboratively on implementing features for the 1.0 version release.',
+      'Writing unit tests and automated test cases for the developed features and fixed issues.'
+    ],
+    tech: ['Java', 'Spring Boot', 'Docker', 'Kubernetes', 'AWS', 'Rest API'],
+  },
   {
     role: 'Software Engineer',
     company: 'Develop For Good',
     location: 'Mountain View, CA',
-    dates: 'Oct 2025 – Present',
+    dates: 'Oct 2025 – Mar 2026',
     liveLink: 'https://www.accesstoexcessfood.org',
     bullets: [
       'Led end-to-end development of a food recovery platform (React, Python, FastAPI, Vercel) serving Ohio organizations, shipping from zero to production in 3 months.',
