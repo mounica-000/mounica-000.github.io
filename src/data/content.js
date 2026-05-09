@@ -31,7 +31,7 @@ export const experiences = [
     location: 'Remote, CA',
     dates: 'Apr 2026 – Present',
     bullets: [
-      'Developing the distributed \textbf{backend REST API} microservices using Java, Spring Boot, Docker, and deploying them in Kafka, AWS EKS (Kubernetes) environments.',
+      'Developing distributed backend REST API microservices using Java, Spring Boot, Docker, and deploying them in Kafka, AWS EKS (Kubernetes) environments.',
       'Fixing existing issues on the webapp and working collaboratively on implementing features for the 1.0 version release.',
       'Writing unit tests and automated test cases for the developed features and fixed issues.'
     ],
